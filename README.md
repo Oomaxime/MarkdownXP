@@ -1,9 +1,9 @@
 MarkdownXP
 
--- Note pour plus tard : faire README ---
+-- Reminder : make un README ---
 
 
-Pour lancer le projet :
+launch project :
 ```
 npm i
 npm run dev
