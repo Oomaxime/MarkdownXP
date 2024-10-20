@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
 
+// Voir comment on va faire les routes, g juste mis ca pour tester le markdown
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import MarkdownProvider from "./providers/MarkdownProvider";
+import MainLayout from "./components/MainLayout/MainLayout"
+import Editor from "./components/Editor/Editor";
+import Preview from "./components/Preview/Preview";
+
+
 //Recuperation jour/mois pour l'eveneemnt historique
 function getDate(){
   const today = new Date();
@@ -96,8 +104,10 @@ function App() {
     
     return () =>  clearInterval(intervalId); 
   }, [] );
-  return (
-    <div>
+
+  function Quotes() {
+    return (
+      <div>
       <h1>Quote of the day</h1>
       <p>{advice}</p>
       <br />
@@ -121,6 +131,33 @@ function App() {
       <h1>Historical Event on this day</h1>
       <p>{ randomEvent && randomEvent.year + ' - ' + randomEvent.text}</p>
     </div>
+    )
+  }
+
+  function Markdown() {
+    return (
+      <MarkdownProvider>
+        <MainLayout>
+          <MainLayout.Column>
+            <Editor />
+          </MainLayout.Column>
+          <MainLayout.Column>
+            <Preview />
+          </MainLayout.Column>
+        </MainLayout>
+      </MarkdownProvider>
+
+    )
+  }
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={Quotes()}>
+        </Route>
+        <Route path="/markdown" element={Markdown()}>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
