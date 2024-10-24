@@ -1,11 +1,13 @@
 .editor__wrap {
     display: flex;
-    align-items: column;
+    flex-direction: column;
     height: 100%;
 }
 
 .editor {
     width: 100%;
+    font-size: 1rem;
+    font-family: 'Fira Code';
     flex-grow: 1;
     color: black;
     margin-bottom: 20px;

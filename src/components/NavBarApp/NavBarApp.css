@@ -1,0 +1,54 @@
+.navBar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.moveBar {
+    display: flex;
+    color: white;
+    text-shadow: 0.6px 0.6px 0px rgba(0, 0, 0, 1);
+    height: 2.5rem;
+    width: 100%;
+    background-color: rgba(14, 104, 241, 1);
+    box-shadow: inset 0px 1.8px 1.2px 0px rgba(50, 145, 255, 1);
+    border-radius: 9.6px 9.6px 0px 0px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.nameProgram {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    gap: .5rem;
+}
+
+.iconeProgram {
+    height: 1.5rem;
+}
+
+.buttonClose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+
+
+
+.toolBar {
+    display: flex;
+    background-color: rgba(239, 235, 216, 100);
+    gap: 1rem;
+    padding: .5rem;
+    padding-left: 1rem;
+}
+
+.toolBar a {
+    color: black
+}

@@ -32,5 +32,10 @@ function Editor() {
   );
 }
 
+
+
+
+// Mettre les proptypes
+
 export default Editor;
 
