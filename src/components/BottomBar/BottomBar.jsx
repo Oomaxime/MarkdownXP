@@ -1,9 +1,13 @@
+import { useEditorContext } from "../../providers/EditorProvider";
 import "./BottomBar.css"
 
 function Preview() {
+
+    const { words, chars } = useEditorContext()
+
     return (
         <nav className="bottomNav">
-            <p>asdasdasd</p>
+            <p>words : {words}, chars : {chars}</p>
         </nav>
     );
 }

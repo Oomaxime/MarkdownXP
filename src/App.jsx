@@ -9,6 +9,7 @@ import Preview from "./components/Preview/Preview";
 import NavBarApp from "./components/NavBarApp/NavBarApp"
 import BottomBar from "./components/BottomBar/BottomBar"
 
+import EditorProvider from "./providers/EditorProvider"
 
 //Recuperation jour/mois pour l'eveneemnt historique
 function getDate(){
@@ -139,18 +140,20 @@ function App() {
   function Markdown() {
     return (
       <div className="markdownApp">
-        <NavBarApp/>
-        <MarkdownProvider>
-          <MainLayout>
-            <MainLayout.Column>
-              <Editor />
-            </MainLayout.Column>
-            <MainLayout.Column>
-              <Preview />
-            </MainLayout.Column>
-          </MainLayout>
-        </MarkdownProvider>
-        <BottomBar/>
+        <EditorProvider>
+          <NavBarApp/>
+          <MarkdownProvider>
+              <MainLayout>
+                <MainLayout.Column>
+                    <Editor />
+                </MainLayout.Column>
+                <MainLayout.Column>
+                  <Preview />
+                </MainLayout.Column>
+              </MainLayout>
+          </MarkdownProvider>
+          <BottomBar/>
+        </EditorProvider>
       </div>
 
     )

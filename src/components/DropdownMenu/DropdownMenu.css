@@ -1,0 +1,19 @@
+.dropdownNav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 1px;
+    background-color: #FFFF;
+    width: 14rem;
+    top: 100%;
+    left: 0;
+}
+
+.dropdownNav a {
+    padding: .5rem;
+    padding-left: 2rem;
+}
+
+.dropdownNav a:hover {
+    background-color: #164DBC;
+}

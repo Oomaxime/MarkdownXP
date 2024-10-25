@@ -1,24 +1,52 @@
 import "./NavBarApp.css"
 import iconeApp from '../../images/icone.png'
 import iconeClose from '../../images/close.png'
+import DropdownMenu from "../DropdownMenu/DropdownMenu";
+import { useState } from "react";
 
 
-function Preview() {
+
+function NavBarApp() {
+
+    const [isHovered, setIsHovered] = useState(false);
+    const [parentPosition, setParentPosition] = useState(0)
+
+
     return (
         <nav className="navBar">
             <div className="moveBar">
                 <div className="nameProgram">
-                <img className="iconeProgram" src={iconeApp} alt="icone" />
-                <p>Titre du fichier - MarkdownXp.exe</p>
+                    <img className="iconeProgram" src={iconeApp} alt="icone" />
+                    <p>Titre du fichier - MarkdownXp.exe</p>
                 </div>
                 <img className="buttonClose" src={iconeClose} alt="icone" />
             </div>
             <div className="toolBar">
-                <a href="">File</a>
-                <a href="">Edit</a>
+                <a href="" 
+                onMouseEnter={()=> {setIsHovered(true); setParentPosition(0)}}
+                onMouseLeave={()=> setIsHovered(false)}
+                >File
+
+                {isHovered && (parentPosition == 0) && (
+                    <DropdownMenu Dict_link={{test:'test', dasdasd:'adad'}}/>
+                )}
+                
+                </a>
+
+                
+                
+                <a href=""                
+                onMouseEnter={()=> {setIsHovered(true); setParentPosition(1)}}
+                onMouseLeave={()=> setIsHovered(false)}
+                >Edit
+                {isHovered && (parentPosition == 1) && (
+                    <DropdownMenu Dict_link={{test:'test'}}/>
+                )}
+
+                </a>
             </div>
         </nav>
     );
 }
 
-export default Preview;
+export default NavBarApp;

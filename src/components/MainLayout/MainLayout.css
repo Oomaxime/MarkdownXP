@@ -9,6 +9,8 @@
 }
 
 .mainLayout__col {
+    width: 49%;
+    padding: .5rem;
     border-top: 4px solid rgba(113, 111, 100, 0.5);
     border-left: 4px solid rgba(113, 111, 100, 0.5);
     box-shadow: inset 4px 4px 0px -5px rgba(113, 111, 100, 0.5);

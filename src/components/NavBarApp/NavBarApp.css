@@ -1,5 +1,6 @@
 .navBar {
     display: flex;
+    position: relative;
     flex-direction: column;
     width: 100%;
 }
@@ -44,11 +45,15 @@
 .toolBar {
     display: flex;
     background-color: rgba(239, 235, 216, 100);
-    gap: 1rem;
-    padding: .5rem;
-    padding-left: 1rem;
+    padding-left: .1rem;
 }
 
 .toolBar a {
+    padding: .2rem .5rem .2rem .5rem;
     color: black
+}
+
+.toolBar a:hover {
+    color: black;
+    background-color: #164DBC;
 }
