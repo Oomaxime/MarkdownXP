@@ -1,5 +1,24 @@
+:root {
+  --primary-color: #1a82ff;
+  --secondary-color: #1b3273;
+  --title-bar-gradient: linear-gradient(#0e68f1, #1961dd, #026afe);
+  --toolbar-bg-color: #efebd8;
+  --border-color: rgba(113, 111, 100, 0.5);
+  --shadow-color: rgba(149, 147, 133, 0.75);
+  --font-color: #7f7c73;
+  --font-family: "dotGothic16";
+  --font-size-small: 10px;
+  --font-size-medium: 12px;
+  --font-size-large: 14px;
+  --border-radius: 12px;
+  --border-radius-small: 10px;
+  --border-width: 2.4px;
+  --box-shadow-inset: inset 0 4.8px 4.8px rgba(109, 178, 255, 0.7),
+    inset 0 -6px 8.4px rgba(0, 0, 0, 0.22);
+}
+
 @font-face {
-  font-family: "dotGothic16";
+  font-family: var(--font-family);
   src: url("../../assets/DotGothic16-Regular.ttf") format("woff2");
   font-weight: normal;
   font-style: normal;
@@ -11,30 +30,24 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  border: 2.4px solid transparent;
+  border: var(--border-width) solid transparent;
   background-origin: border-box;
   background-clip: content-box, border-box;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  box-shadow: inset 0 4.8px 4.8px rgba(109, 178, 255, 0.7),
-    inset 0 -6px 8.4px rgba(0, 0, 0, 0.22);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  box-shadow: var(--box-shadow-inset);
 }
 
+/*L'astuce du before pour faire des border avec un gradient viens de Copilote*/
 .browserWindow::before {
   content: "";
   position: absolute;
-  top: -2.4px;
-  left: -2.4px;
-  right: -2.4px;
-  bottom: -2.4px;
-  background: linear-gradient(#1a82ff, #1b3273);
+  top: calc(-1 * var(--border-width));
+  left: calc(-1 * var(--border-width));
+  right: calc(-1 * var(--border-width));
+  bottom: calc(-1 * var(--border-width));
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
   z-index: -1;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .browserWindowTitleBar {
@@ -42,16 +55,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px;
-  background: linear-gradient(#0e68f1, #1961dd, #026afe);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  background: var(--title-bar-gradient);
+  border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
   box-shadow: inset 0 2px 1.2px #3291ff;
 }
 
 .mainTitle {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: var(--font-size-large);
   color: white;
   gap: 8px;
 }
@@ -59,6 +71,7 @@
 .mainTitle img {
   height: 17px;
 }
+
 .mainTitle span {
   text-shadow: 0.6px 0.6px 0 rgba(0, 0, 0);
 }
@@ -85,9 +98,10 @@
   font-size: 11px;
   width: 100%;
   height: 100%;
-  background-color: #efebd8;
+  background-color: var(--toolbar-bg-color);
   padding-inline-start: 14px;
 }
+
 .toolBarUL li {
   cursor: default;
 }
@@ -111,14 +125,24 @@
   height: 18px;
 }
 
+.styledHr {
+  height: var(--border-width);
+  z-index: 1;
+  width: 100%;
+  background: #ffffff;
+  border: none;
+  margin-block: 0;
+  box-shadow: inset 0 1.2px 0 #d8d2bd;
+}
+
 .adressBar {
   display: flex;
   align-items: center;
   gap: 8px;
   height: 28px;
-  background-color: #efebd8;
-  font-size: 10px;
-  color: #7f7c73;
+  background-color: var(--toolbar-bg-color);
+  font-size: var(--font-size-small);
+  color: var(--font-color);
   padding-left: 10px;
 }
 
@@ -134,9 +158,9 @@
   height: 20px;
   border: 1px solid #7f9db9;
   background-color: white;
-  font-size: 10px;
-  width: 100%;
-  padding: 0px 2px;
+  font-size: var(--font-size-small);
+  flex-grow: 1;
+  padding: 0 2px;
 }
 
 .urlInput > div {
@@ -157,7 +181,7 @@
   cursor: pointer;
   color: black;
   font-size: 13px;
-  margin-right: 20px;
+  margin-right: 30px;
   gap: 4px;
 }
 
@@ -165,12 +189,22 @@
   cursor: pointer;
 }
 
+.styledHrV {
+  height: 100%;
+  width: var(--border-width);
+  background: #ffffff;
+  border: none;
+  margin-block: 0;
+  box-shadow: inset 1.2px 1.2px 0 #d8d2bd;
+}
+
 .linkDiv {
   display: flex;
   align-items: center;
   gap: 4px;
-  color: #7f7c73;
-  font-size: 12px;
+  color: var(--font-color);
+  font-size: var(--font-size-medium);
+  padding: 0 2px;
 }
 
 .blackArrowPicture {
@@ -183,22 +217,21 @@
   flex-direction: column;
   height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 2px;
   background-color: white;
-  border-top: 1.2px solid rgba(113, 111, 100, 0.5);
-  border-right: 1.2px solid rgba(113, 111, 100, 0.5);
-  border-left: 1.2px solid rgba(113, 111, 100, 0.5);
-  box-shadow: inset 2.4px 2.4px 0.6 rgba(113, 111, 100, 0.5);
+  border: 1.2px solid var(--border-color);
+  border-top: none;
+  box-shadow: inset 1px 2px 2px #716f6480;
 }
 
-.styledHr {
-  height: 2.4px;
+.styledHrWithDropShadow {
+  height: var(--border-width);
   z-index: 1;
   width: 100%;
   background: #ffffff;
   border: none;
   margin-block: 0;
-  box-shadow: inset 0 1.2px 0 #f0efe2, 0 2.4px 1.8px rgba(149, 147, 133, 0.75),
+  box-shadow: inset 0 1.2px 0 #f0efe2, 0 2.4px 1.8px var(--shadow-color),
     0 1.2px 0 #959385;
 }
 
@@ -207,8 +240,8 @@
   align-items: center;
   gap: 4px;
   height: 26px;
-  font-family: "dotGothic16";
-  font-size: 12px;
-  background-color: #efebd8;
+  font-family: var(--font-family);
+  font-size: var(--font-size-medium);
+  background-color: var(--toolbar-bg-color);
   padding-left: 4px;
 }
