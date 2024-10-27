@@ -1,4 +1,5 @@
 import Navbar from "./components/navbar";
+import WebBrowser from "./components/WebBrowser/WebBrowser";
 
 function App() {
   return (
@@ -6,7 +7,7 @@ function App() {
     <body>
       <h1>MarkdownXP</h1>
       <main>
-        {/* Mettez ici les ajout pour qu'ils n'interferrent pas avec la navbar */}
+        <WebBrowser />;
       </main>
       <Navbar />
     </body>
