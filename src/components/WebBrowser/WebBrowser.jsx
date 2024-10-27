@@ -46,11 +46,11 @@ export default function WebBrowser({
     >
       <div className="browserWindowTitleBar" onMouseDown={handleMouseDown}>
         <div className="mainTitle">
-          <img src="./src/assets/explorerLogo.png" alt="IE" />
+          <img src="./src/assets/images/explorerLogo.png" alt="IE" />
           <span>{title || "MarkdownXP Explorer"}</span>
         </div>
         <img
-          src="./src/assets/closeButton.svg"
+          src="./src/assets/images/closeButton.svg"
           alt="close"
           className="closeButton"
         />
@@ -77,7 +77,7 @@ export default function WebBrowser({
           </li>
         </ul>
         <div className="browserWindowsXpPicto">
-          <img src="./src/assets/winXPpicto.png" alt="WindowsXP" />
+          <img src="./src/assets/images/winXPpicto.png" alt="WindowsXP" />
         </div>
       </div>
       <hr className="styledHr" />
@@ -87,13 +87,13 @@ export default function WebBrowser({
         </p>
         <div className="urlInput">
           <div>
-            <img src="./src/assets/iexplorePage.png" alt="IE page" />
+            <img src="./src/assets/images/iexplorePage.png" alt="IE page" />
             <p>{url || "https://www.avoir20sur20.com/?=projetMarkdonwXP"}</p>
           </div>
-          <img src="./src/assets/dropdownArrow.svg" alt="see more" />
+          <img src="./src/assets/images/dropdownArrow.svg" alt="see more" />
         </div>
         <div className="goButton">
-          <img src="./src/assets/greenArrow.svg" alt="go" />
+          <img src="./src/assets/images/greenArrow.svg" alt="go" />
           <p>Go</p>
         </div>
         <hr className="styledHrV" />
@@ -101,7 +101,7 @@ export default function WebBrowser({
           <p>Links</p>
           <img
             className="blackArrowPicture"
-            src="./src/assets/doubleArrow.svg"
+            src="./src/assets/images/doubleArrow.svg"
             alt="see more"
           />
         </div>
@@ -110,7 +110,7 @@ export default function WebBrowser({
       <hr className="styledHrWithDropShadow" />
 
       <div className="browserFooter">
-        <img src="./src/assets/iexplorePage.png" alt="IE page" />
+        <img src="./src/assets/images/iexplorePage.png" alt="IE page" />
         <p>Done</p>
       </div>
     </div>

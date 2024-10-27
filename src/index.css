@@ -6,6 +6,13 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../../assets/fonts/SegoeUI.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -16,6 +23,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -40,112 +48,4 @@ a {
 
 button {
   cursor: pointer;
-}
-nav.startButton {
-    width: 100%;
-    background-color: #235CDB;
-    position: fixed;
-    bottom: 0;
-    height: 40px;
-}
-
-nav.startButton ul {
-    border: 1px solid black;
-    background-color: #45B845;
-    height: 100%;
-    width: 5%;
-    list-style-type: none;
-    color: white;
-    margin-top: 0;
-    border-top-right-radius: 13%;
-    border-bottom-right-radius: 13%;
-}
-
-li.start {
-    transform: translateY(-30px) translateX(20px);
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: 100;
-    font-size: 30px;
-}
-
-.hour{
-    border: 1px solid black;
-    background-color: #1290E8;
-    color: rgb(255, 255, 255);
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1;
-    height: 100%;
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: 100;
-}
-
-.hour p {
-    margin: 1px;
-    padding: 1px;
-}
-
-.windowslogo {
-    transform: translateY(5px) translateX(-45px);
-    position: absolute;
-    width: 35%;
-}
-
-.language {
-    color: rgb(255, 255, 255);
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translateX(-150px);
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: 100;
-    font-size: 13px;
-}
-
-nav.startButton ul:hover {
-    background-color: #90CF91;
-    color: rgb(226, 217, 217);
-    cursor: pointer;
-    user-select: none;
-}
-
-/* MENU WINDOWS */
-
-nav.windowsMenu {
-    position: fixed;
-    bottom: 0;
-    transform: translateY(-40px);
-    font-family: 'Segoe UI', sans-serif;
-    color: black;
-}
-
-nav.windowsMenu .topBleu {
-    background-color: #235CDB;
-    color: white;
-    padding: 15px;
-    font-weight: bold;
-    text-align: left;
-}
-
-nav.windowsMenu .centralMenu {
-    padding: 200px;
-    width: 20px;
-    background-color: #C4E6F9;
-    font-size: 14px;
-    color: black;
-    text-align: left;
-}
-
-
-nav.windowsMenu .bottomBleu {
-    background-color: #235CDB;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 12px;
 }

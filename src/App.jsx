@@ -1,16 +1,13 @@
-import Navbar from "./components/navbar";
+import Navbar from "./components/NavBar/Navbar";
 import WebBrowser from "./components/WebBrowser/WebBrowser";
 
 function App() {
   return (
     <>
-    <body>
-      <h1>MarkdownXP</h1>
       <main>
-        <WebBrowser />;
+        <WebBrowser />
       </main>
       <Navbar />
-    </body>
     </>
   );
 }
