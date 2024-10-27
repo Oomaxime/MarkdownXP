@@ -80,8 +80,39 @@ nav.startButton ul:hover {
     user-select: none;
 }
 
+/* MENU WINDOWS */
+
 nav.windowsMenu {
     position: fixed;
     bottom: 0;
     transform: translateY(-40px);
+    font-family: 'Segoe UI', sans-serif;
+    color: black;
 }
+
+nav.windowsMenu .topBleu {
+    background-color: #235CDB;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+nav.windowsMenu .centralMenu {
+    padding: 200px;
+    width: 20px;
+    background-color: #C4E6F9;
+    font-size: 14px;
+    color: black;
+    text-align: left;
+}
+
+
+nav.windowsMenu .bottomBleu {
+    background-color: #235CDB;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
