@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../../assets/fonts/SegoeUI.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../../assets/fonts/SegoeUIBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../../assets/fonts/SegoeUIItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../../assets/fonts/SegoeUIBoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+.menuBar {
+  width: 100%;
+  background-color: #235cdb;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.startButton {
+  background-color: #45db23;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 25px;
+  padding-right: 40px;
+  font-family: "Segoe UI", sans-serif;
+  border-radius: 0 50px 50px 0;
+  flex-shrink: 0;
+  gap: 8px;
+  height: 65px;
+  border: none;
+}
+
+.windowsLogo {
+  height: 31px;
+}
+
+.startButton > p {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Segoe UI", sans-serif;
+  font-style: italic;
+  text-shadow: 1px 2px 2px #00000081;
+}
+
+li.start {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.hour {
+  background-color: #1290e8;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 100;
+}
+
+.hour p {
+  margin: 1px;
+  padding: 1px;
+}
+
+.language {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(-150px);
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 100;
+  font-size: 13px;
+}
+
+/* MENU WINDOWS */
+
+nav.windowsMenu {
+  position: fixed;
+  bottom: 0;
+  transform: translateY(-40px);
+  font-family: "Segoe UI", sans-serif;
+  color: black;
+}
+
+nav.windowsMenu .topBleu {
+  background-color: #235cdb;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  text-align: left;
+}
+
+nav.windowsMenu .centralMenu {
+  padding: 200px;
+  width: 20px;
+  background-color: #c4e6f9;
+  font-size: 14px;
+  color: black;
+  text-align: left;
+}
+
+nav.windowsMenu .bottomBleu {
+  background-color: #235cdb;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+}

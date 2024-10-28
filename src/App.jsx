@@ -8,7 +8,8 @@ import Editor from "./components/Editor/Editor";
 import Preview from "./components/Preview/Preview";
 import NavBarApp from "./components/NavBarApp/NavBarApp"
 import BottomBar from "./components/BottomBar/BottomBar"
-
+import Navbar from "./components/NavBar/Navbar";
+import WebBrowser from "./components/WebBrowser/WebBrowser";
 import EditorProvider from "./providers/EditorProvider"
 
 //Recuperation jour/mois pour l'eveneemnt historique
@@ -110,30 +111,12 @@ function App() {
 
   function Quotes() {
     return (
-      <div>
-      <h1>Quote of the day</h1>
-      <p>{advice}</p>
-      <br />
-      <h1>Joke of the day</h1>
-      <p>{joke.setup}</p>
-      <p>{joke.punchline}</p>
-      <br />
-      <h1>Mocktail of the day</h1>
-      <p>{mocktail.strDrink}</p>
-      <img src={mocktail.strDrinkThumb} alt={mocktail.strDrink} />
-      <br />
-      <h1>Recipe of the day</h1>
-      <p>{recipe.strMeal}</p>
-      <p>{recipe.strInstructions}</p>
-      <ul>
-        {recipe.strIngredients.map((ingredients, index) =>(
-          <li key= {index}>{ingredients}</li>
-        ))}
-      </ul>
-      <br />
-      <h1>Historical Event on this day</h1>
-      <p>{ randomEvent && randomEvent.year + ' - ' + randomEvent.text}</p>
-    </div>
+     <>
+      <main>
+        <WebBrowser />
+      </main>
+      <Navbar />
+    </>
     )
   }
 
@@ -167,7 +150,8 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-  );
+)
 }
+
 
 export default App;
