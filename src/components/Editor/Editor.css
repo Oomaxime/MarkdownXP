@@ -1,0 +1,19 @@
+.editor__wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.editor {
+    width: 100%;
+    /* font-size: 1rem; */
+    /* font-family: 'Fira Code'; */
+    flex-grow: 1;
+    color: black;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    appearance: none;
+    background: none;
+    resize: none;
+}

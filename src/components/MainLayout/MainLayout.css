@@ -1,0 +1,18 @@
+.mainLayout {
+    font-size: 1rem;
+    display: flex;
+    height: 100%;
+    background-color: white;
+    width: calc(100% - .5rem);
+    
+
+}
+
+.mainLayout__col {
+    width: 49%;
+    padding: .5rem;
+    border-top: 4px solid rgba(113, 111, 100, 0.5);
+    border-left: 4px solid rgba(113, 111, 100, 0.5);
+    box-shadow: inset 4px 4px 0px -5px rgba(113, 111, 100, 0.5);
+    flex: 1;
+}

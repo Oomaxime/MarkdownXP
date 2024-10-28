@@ -1,0 +1,6 @@
+.bottomNav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(239, 235, 216, 100);
+}
