@@ -9,10 +9,16 @@ import Navbar from "./components/NavBar/Navbar";
 import WebBrowser from "./components/WebBrowser/WebBrowser";
 import EditorProvider from "./providers/EditorProvider";
 
+
+// A retirer 
+import Test from "./components/Test/Test";
+
+
 function App() {
   function Desktop() {
     return (
       <>
+        <Test/>
         <main>
           <WebBrowser />
         </main>

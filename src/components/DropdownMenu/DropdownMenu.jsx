@@ -5,7 +5,7 @@ function DropdownMenu({Dict_link}) {
         <div className="dropdownNav">
             {
                 Object.entries(Dict_link).map(([text, link]) => {
-                    return <a href={link}>{text}</a>
+                    return <a id={text} href={link}>{text}</a>
                 })
             }
         </div>

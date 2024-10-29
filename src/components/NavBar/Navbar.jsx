@@ -1,10 +1,21 @@
 import windowslogo from "../../assets/images/windowslogo.png";
 import "./nav.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Menu from "./Menu";
+
+
 
 export default function Navbar() {
   const [menuVisible, setMenuVisible] = useState(false);
+  const [time, settime] = useState(new Date())
+  
+
+  useEffect(()=>{
+    const intervalId = setInterval(async() => {
+      settime(new Date());
+    }, 60000);
+    return () => clearInterval(intervalId);
+  }, [])
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
@@ -20,8 +31,12 @@ export default function Navbar() {
         <p>EN</p>
       </div>
       <div className="hour">
-        <p>11:11</p>
-        <p>YYYY-DD-MM</p>
+        <p>
+          {time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+        </p>
+        <p>
+          {String(time.getDate()).padStart(2,'0')}/{String(time.getMonth()+1).padStart(2, '0')}/{String(time.getFullYear()).padStart(2, '0')}
+        </p>
       </div>
       {menuVisible && <Menu />}
     </nav>
