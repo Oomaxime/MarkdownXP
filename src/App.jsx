@@ -23,22 +23,25 @@ function App() {
 
   function Markdown() {
     return (
-      <div className="markdownApp">
-        <EditorProvider>
-          <NavBarApp />
-          <MarkdownProvider>
-            <MainLayout>
-              <MainLayout.Column>
-                <Editor />
-              </MainLayout.Column>
-              <MainLayout.Column>
-                <Preview />
-              </MainLayout.Column>
-            </MainLayout>
-          </MarkdownProvider>
-          <BottomBar />
-        </EditorProvider>
-      </div>
+      <>
+        <main className="markdownApp">
+          <EditorProvider>
+            <MarkdownProvider>
+            <NavBarApp />
+              <MainLayout>
+                <MainLayout.Column>
+                  <Editor />
+                </MainLayout.Column>
+                <MainLayout.Column>
+                  <Preview />
+                </MainLayout.Column>
+              </MainLayout>
+            </MarkdownProvider>
+            <BottomBar />
+          </EditorProvider>
+        </main>
+        <Navbar />
+      </>
     );
   }
   return (
