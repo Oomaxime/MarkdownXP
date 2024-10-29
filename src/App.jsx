@@ -23,10 +23,11 @@ function App() {
 
   function Markdown() {
     return (
-      <div className="markdownApp">
+      <>
+      <main className="markdownApp">
         <EditorProvider>
-          <NavBarApp />
           <MarkdownProvider>
+          <NavBarApp />
             <MainLayout>
               <MainLayout.Column>
                 <Editor />
@@ -38,7 +39,9 @@ function App() {
           </MarkdownProvider>
           <BottomBar />
         </EditorProvider>
-      </div>
+      </main>
+      <Navbar />
+      </>
     );
   }
   return (

@@ -3,6 +3,8 @@ import { useMarkdown } from "../../providers/MarkdownProvider";
 import Markdown from "markdown-to-jsx";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialLight } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import "./Preview.css"
+
 
 function Code({ className = '', children }) {
     const language = className.replace("lang-", "");
@@ -20,20 +22,20 @@ function Preview() {
     const [markdown] = useMarkdown()
 
     return (
-        <div>
+        <div className="preview">
             <TitleBar title="Preview"/>
-            <div>
-                <Markdown 
-                    options={{
-                        overrides: {
-                            code: {
-                                component: Code,
-                            },
-                            },
-                    }}
-                >
-                    { markdown }
-                </Markdown>
+            <div className="preview__scroll">
+            <Markdown 
+                options={{
+                    overrides: {
+                        code: {
+                            component: Code,
+                        },
+                        },
+                }}
+            >
+                { markdown }
+            </Markdown>
             </div>
         </div>
     );

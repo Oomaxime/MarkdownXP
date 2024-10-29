@@ -18,31 +18,24 @@ function NavBarApp() {
         <img className="buttonClose" src={iconeClose} alt="icone" />
       </div>
       <div className="toolBar">
-        <a
-          href=""
-          onMouseEnter={() => {
-            setIsHovered(true);
-            setParentPosition(0);
-          }}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          File
-          {isHovered && parentPosition == 0 && (
-            <DropdownMenu Dict_link={{ test: "test", dasdasd: "adad" }} />
+        <a href="" 
+          onMouseEnter={()=> {setIsHovered(true); setParentPosition(0)}}
+          onMouseLeave={()=> setIsHovered(false)}
+          className="link"
+          >File
+
+          {isHovered && (parentPosition == 0) && (
+              <DropdownMenu Dict_link={{test:'test', dasdasd:'adad'}}/>
           )}
         </a>
 
-        <a
-          href=""
-          onMouseEnter={() => {
-            setIsHovered(true);
-            setParentPosition(1);
-          }}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          Edit
-          {isHovered && parentPosition == 1 && (
-            <DropdownMenu Dict_link={{ test: "test" }} />
+        <a href=""                
+          onMouseEnter={()=> {setIsHovered(true); setParentPosition(1)}}
+          onMouseLeave={()=> setIsHovered(false)}
+          className="link"
+          >Edit
+          {isHovered && (parentPosition == 1) && (
+              <DropdownMenu Dict_link={{test:'test'}}/>
           )}
         </a>
       </div>
