@@ -29,7 +29,7 @@
 .menuBar {
   width: 100%;
   background-color: #235cdb;
-  position: relative;
+  position: fixed;
   bottom: 0;
   left: 0;
   height: 52px;
@@ -37,6 +37,7 @@
   align-items: center;
   overflow: hidden;
 }
+
 .startButton {
   background-color: #45db23;
   color: white;
