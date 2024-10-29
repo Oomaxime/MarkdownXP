@@ -9,6 +9,8 @@ import Navbar from "./components/NavBar/Navbar";
 import WebBrowser from "./components/WebBrowser/WebBrowser";
 import EditorProvider from "./providers/EditorProvider";
 
+
+
 function App() {
   function Desktop() {
     return (
