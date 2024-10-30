@@ -7,6 +7,7 @@ export const useEditorContext = () => {
 };
 
 export default function EditorProvider({ children }) {
+    
     const [words, setWords] = useState(0);
     const [chars, setChars] = useState(0);
 

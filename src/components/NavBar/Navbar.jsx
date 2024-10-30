@@ -2,6 +2,8 @@ import windowslogo from "../../assets/images/windowslogo.png";
 import "./nav.css";
 import { useEffect, useState } from "react";
 import Menu from "./Menu";
+import OpenedFiles from "../OpenedFiles/OpenedFiles";
+
 
 
 
@@ -27,6 +29,7 @@ export default function Navbar() {
         <img src={windowslogo} className="windowslogo" alt="Windows Logo" />
         <p>start</p>
       </button>
+      <OpenedFiles/>
       <div className="language">
         <p>EN</p>
       </div>
