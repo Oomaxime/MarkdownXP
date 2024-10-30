@@ -18,6 +18,7 @@ export default function Navbar() {
         <img src={windowslogo} className="windowslogo" alt="Windows Logo" />
         <p>start</p>
       </button>
+      <OpenedFiles/>
       <div className="language">
         <p>EN</p>
       </div>

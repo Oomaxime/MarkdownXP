@@ -8,9 +8,10 @@ function OpenedFiles() {
     const [markdown, setMarkdown, titleMarkdown, setTitleMarkdown] = useMarkdown();
 
 
-    console.log(data)
     function RemoveFile(idFileToRemove) {
         setData(data.filter((file)=> file.id != idFileToRemove))
+        setMarkdown(File.body) // A AMELIORER
+        setTitleMarkdown(File.title)
     }
 
     function OpenFile(idFileToOpen) {
