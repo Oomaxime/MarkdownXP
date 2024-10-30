@@ -5,7 +5,7 @@ import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import { useState } from "react";
 import { useMarkdown } from "../../providers/MarkdownProvider";
 import DownloadFile from "../DownloadFile/DownloadFile";
-
+import { useLocalStorageContext } from "../../providers/LocalStorageProvider";
 
 function NavBarApp() {
   const [isHovered, setIsHovered] = useState(false);
@@ -60,7 +60,7 @@ function NavBarApp() {
           >File
 
           {isHovered && (parentPosition == 0) && (
-              <DropdownMenu Dict_link={{new:'', download:''}}/>
+              <DropdownMenu Dict_link={{new:'', download:'', save:''}}/>
           )}
         </div>
 

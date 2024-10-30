@@ -23,5 +23,4 @@ function DownloadFile() {
         <button className='download' onClick={Download}>Download</button>
     )
 }
-
 export default DownloadFile

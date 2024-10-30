@@ -8,6 +8,8 @@ import BottomBar from "./components/BottomBar/BottomBar";
 import Navbar from "./components/NavBar/Navbar";
 import WebBrowser from "./components/WebBrowser/WebBrowser";
 import EditorProvider from "./providers/EditorProvider";
+import LocalStorageProvider from "./providers/LocalStorageProvider";
+
 
 function App() {
   function Desktop() {
@@ -24,9 +26,10 @@ function App() {
   function Markdown() {
     return (
       <>
+        <LocalStorageProvider>
+        <MarkdownProvider>
         <main className="markdownApp">
           <EditorProvider>
-            <MarkdownProvider>
             <NavBarApp />
               <MainLayout>
                 <MainLayout.Column>
@@ -36,11 +39,12 @@ function App() {
                   <Preview />
                 </MainLayout.Column>
               </MainLayout>
-            </MarkdownProvider>
             <BottomBar />
           </EditorProvider>
         </main>
         <Navbar />
+        </MarkdownProvider>
+        </LocalStorageProvider>
       </>
     );
   }

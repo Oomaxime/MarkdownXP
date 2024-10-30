@@ -34,7 +34,7 @@ body {
 
 img,
 video {
-  max-width: 100%;
+  /* max-width: 100%; Ca casse les icones en bas et je sais pas encore pk */
   height: auto;
 }
 

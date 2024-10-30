@@ -2,6 +2,8 @@ import windowslogo from "../../assets/images/windowslogo.png";
 import "./nav.css";
 import { useState } from "react";
 import Menu from "./Menu";
+import OpenedFiles from "../OpenedFiles/OpenedFiles";
+
 
 export default function Navbar() {
   const [menuVisible, setMenuVisible] = useState(false);

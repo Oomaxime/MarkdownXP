@@ -1,6 +1,7 @@
 import "./DropdownMenu.css"
 import DownloadFile from "../DownloadFile/DownloadFile"
 import NewFile from "../NewFile/NewFile"
+import SaveFile from "../SaveFile/SaveFile";
 
 function DropdownMenu({Dict_link}) {
     return (
@@ -13,6 +14,9 @@ function DropdownMenu({Dict_link}) {
 
                         case 'new' :
                             return <NewFile/>;
+
+                        case 'save' :
+                            return <SaveFile/>
 
                         default:
                             return <a id={text} href={link}>{text}</a>;
