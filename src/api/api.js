@@ -90,4 +90,10 @@ function fetchEventHistorical() {
     });
 }
 
-export {fetchAdvice,fetchJoke,fetchMocktail,fetchRecipe,fetchEventHistorical}
+export {
+  fetchAdvice,
+  fetchEventHistorical,
+  fetchJoke,
+  fetchMocktail,
+  fetchRecipe,
+};

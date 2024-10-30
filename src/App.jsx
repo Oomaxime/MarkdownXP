@@ -10,9 +10,6 @@ import WebBrowser from "./components/WebBrowser/WebBrowser";
 import EditorProvider from "./providers/EditorProvider";
 import LocalStorageProvider from "./providers/LocalStorageProvider";
 
-
-
-
 function App() {
   function Desktop() {
     return (
@@ -29,23 +26,23 @@ function App() {
     return (
       <>
         <LocalStorageProvider>
-        <MarkdownProvider>
-        <main className="markdownApp">
-          <EditorProvider>
-            <NavBarApp />
-              <MainLayout>
-                <MainLayout.Column>
-                  <Editor />
-                </MainLayout.Column>
-                <MainLayout.Column>
-                  <Preview />
-                </MainLayout.Column>
-              </MainLayout>
-            <BottomBar />
-          </EditorProvider>
-        </main>
-        <Navbar />
-        </MarkdownProvider>
+          <MarkdownProvider>
+            <main className="markdownApp">
+              <EditorProvider>
+                <NavBarApp />
+                <MainLayout>
+                  <MainLayout.Column>
+                    <Editor />
+                  </MainLayout.Column>
+                  <MainLayout.Column>
+                    <Preview />
+                  </MainLayout.Column>
+                </MainLayout>
+                <BottomBar />
+              </EditorProvider>
+            </main>
+            <Navbar />
+          </MarkdownProvider>
         </LocalStorageProvider>
       </>
     );
