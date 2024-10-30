@@ -3,22 +3,58 @@ import iconeApp from "../../assets/images/icone.png";
 import iconeClose from "../../assets/images/closeButton.svg";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import { useState } from "react";
+import { useMarkdown } from "../../providers/MarkdownProvider";
+import DownloadFile from "../DownloadFile/DownloadFile";
+
 
 function NavBarApp() {
   const [isHovered, setIsHovered] = useState(false);
   const [parentPosition, setParentPosition] = useState(0);
+  const [markdown, setMarkdown, titleMarkdown, setTitleMarkdown] = useMarkdown();
+  const [oldname, setOldName] = useState("")
+
+  function updateTitleMarkdown(event) {
+    const value = event.target.value;
+    setTitleMarkdown(value);
+  };
+
+  function saveOldName(event) {
+    setOldName(titleMarkdown)
+  }
+
+  function isVoid(event) {
+    setTitleMarkdown(oldname)
+  }
+
+  function addTitleUpdate(event) {
+    if (event.key === "Enter") {
+      if (titleMarkdown != "") {
+        setOldName(titleMarkdown)
+        
+      } else {
+        setOldName("Document")
+      }
+      setTimeout(()=>{
+        event.target.blur();
+      }, 1)
+    }
+  }
 
   return (
     <nav className="navBar">
       <div className="moveBar">
         <div className="nameProgram">
           <img className="iconeProgram" src={iconeApp} alt="icone" />
-          <p>Titre du fichier - MarkdownXp.exe</p>
+          <div className="title"> 
+          <input id="titleMarkdown" type="text" value={titleMarkdown} onChange={updateTitleMarkdown} onFocus={saveOldName} onKeyDown={addTitleUpdate} onBlur={isVoid}/>
+          <p> - MarkdownXp.exe</p>
+          </div>
         </div>
         <img className="buttonClose" src={iconeClose} alt="icone" />
       </div>
+      <DownloadFile/>
       <div className="toolBar">
-        <a href="" 
+        <div href="" 
           onMouseEnter={()=> {setIsHovered(true); setParentPosition(0)}}
           onMouseLeave={()=> setIsHovered(false)}
           className="link"
@@ -27,9 +63,9 @@ function NavBarApp() {
           {isHovered && (parentPosition == 0) && (
               <DropdownMenu Dict_link={{test:'test', dasdasd:'adad'}}/>
           )}
-        </a>
+        </div>
 
-        <a href=""                
+        <div href=""                
           onMouseEnter={()=> {setIsHovered(true); setParentPosition(1)}}
           onMouseLeave={()=> setIsHovered(false)}
           className="link"
@@ -37,7 +73,7 @@ function NavBarApp() {
           {isHovered && (parentPosition == 1) && (
               <DropdownMenu Dict_link={{test:'test'}}/>
           )}
-        </a>
+        </div>
       </div>
     </nav>
   );

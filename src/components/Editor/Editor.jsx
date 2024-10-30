@@ -18,6 +18,7 @@ function Editor() {
   function updateMarkdown(event) {
     const value = event.target.value;
 
+    console.log(value)
     setMarkdown(value);
     setWords(getWordsCount(value));
     setChars(getCharsCount(value));

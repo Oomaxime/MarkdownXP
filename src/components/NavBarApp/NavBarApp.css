@@ -49,12 +49,27 @@
     padding-left: .1rem;
 }
 
-.toolBar a {
+.link {
     padding: .2rem .5rem .2rem .5rem;
-    color: black
+    color: black;
+    cursor: pointer;
 }
 
-.toolBar a:hover {
+.link:hover {
     color: black;
     background-color: #164DBC;
+}
+
+.title {
+    display: flex;
+    width: fit-content;
+}
+
+#titleMarkdown {
+    field-sizing: content; 
+    padding-right: .25rem;
+    color: white;
+    text-shadow: 0.6px 0.6px 0px rgba(0, 0, 0, 1);
+    background-color: transparent;
+    border: none;
 }
