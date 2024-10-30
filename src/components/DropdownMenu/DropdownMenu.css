@@ -9,11 +9,15 @@
     left: 0;
 }
 
-.dropdownNav a {
+.dropdownNav a, button {
     padding: .5rem;
     padding-left: 2rem;
 }
 
 .dropdownNav a:hover {
+    background-color: #164DBC;
+}
+
+.dropdownNav button:hover {
     background-color: #164DBC;
 }

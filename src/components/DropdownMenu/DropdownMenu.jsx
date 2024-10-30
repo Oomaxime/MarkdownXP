@@ -1,11 +1,22 @@
 import "./DropdownMenu.css"
+import DownloadFile from "../DownloadFile/DownloadFile"
+import NewFile from "../NewFile/NewFile"
 
 function DropdownMenu({Dict_link}) {
     return (
         <div className="dropdownNav">
             {
                 Object.entries(Dict_link).map(([text, link]) => {
-                    return <a key={text} href={link}>{text}</a>
+                    switch (text) {
+                        case 'download':
+                            return <DownloadFile/>;                     
+
+                        case 'new' :
+                            return <NewFile/>;
+
+                        default:
+                            return <a id={text} href={link}>{text}</a>;
+                    }
                 })
             }
         </div>

@@ -52,7 +52,6 @@ function NavBarApp() {
         </div>
         <img className="buttonClose" src={iconeClose} alt="icone" />
       </div>
-      <DownloadFile/>
       <div className="toolBar">
         <div href="" 
           onMouseEnter={()=> {setIsHovered(true); setParentPosition(0)}}
@@ -61,7 +60,7 @@ function NavBarApp() {
           >File
 
           {isHovered && (parentPosition == 0) && (
-              <DropdownMenu Dict_link={{test:'test', dasdasd:'adad'}}/>
+              <DropdownMenu Dict_link={{new:'', download:''}}/>
           )}
         </div>
 

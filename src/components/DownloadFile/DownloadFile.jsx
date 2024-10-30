@@ -1,4 +1,5 @@
 import React from 'react'
+import "./DownloadFile.css"
 import { useMarkdown } from '../../providers/MarkdownProvider'
 
 function DownloadFile() {
@@ -19,9 +20,7 @@ function DownloadFile() {
     }
 
     return (
-        <div>
-            <button onClick={Download}>Download</button>
-        </div>
+        <button className='download' onClick={Download}>Download</button>
     )
 }
 
