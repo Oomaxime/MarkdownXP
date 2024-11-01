@@ -9,12 +9,17 @@ import Navbar from "./components/NavBar/Navbar";
 import WebBrowser from "./components/WebBrowser/WebBrowser";
 import EditorProvider from "./providers/EditorProvider";
 import LocalStorageProvider from "./providers/LocalStorageProvider";
+import DesktopShortcut from "./components/DesktopShortcut/DesktopShortcut";
 
 function App() {
   function Desktop() {
     return (
       <>
         <main>
+          <DesktopShortcut
+            label="API Storm"
+            icon="src/assets/images/IeShortcutIcon.png"
+          />
           <WebBrowser />
         </main>
         <Navbar />
