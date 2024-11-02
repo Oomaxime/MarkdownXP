@@ -51,7 +51,7 @@
   border-radius: 0 50px 50px 0;
   flex-shrink: 0;
   gap: 8px;
-  height: 65px;
+  height: 67px;
   border: none;
 }
 
@@ -99,7 +99,7 @@ li.start {
   position: absolute;
   right: 0;
   top: 0;
-  transform: translateX(-150px);
+  transform: translateX(-140px) translateY(15px);
   font-family: "Segoe UI", sans-serif;
   font-weight: 100;
   font-size: 13px;
@@ -110,12 +110,13 @@ li.start {
 nav.windowsMenu {
   position: fixed;
   bottom: 0;
-  transform: translateY(-40px);
+  transform: translateY(-52px);
   font-family: "Segoe UI", sans-serif;
   color: black;
 }
 
 nav.windowsMenu .topBleu {
+  border-radius: 0px 20px 0px 0px;
   background-color: #235cdb;
   color: white;
   padding: 15px;
@@ -126,16 +127,44 @@ nav.windowsMenu .topBleu {
 nav.windowsMenu .centralMenu {
   padding: 200px;
   width: 20px;
-  background-color: #c4e6f9;
+  background-image: linear-gradient(to right, white 0%, white 50%,  #c4e6f9 50%,  #c4e6f9 100%);
   font-size: 14px;
   color: black;
-  text-align: left;
 }
 
 nav.windowsMenu .bottomBleu {
   background-color: #235cdb;
   color: white;
   padding: 20px;
-  text-align: center;
+  text-align: right;
+  font-size: 14px;
+  flex: 1;
+}
+nav.windowsMenu .shutdown {
+  width: 8%;
+  margin-right: 10px;
+  transform: translateY(-2px);
+  height: auto;
+  vertical-align: middle;
+}
+
+nav.windowsMenu .menu-item {
+  transform: translateX(-150px) translateY(-180px);
+  font-size: 20px;
+}
+
+nav.windowsMenu .under-item {
+  transform: translateX(-150px) translateY(-180px);
   font-size: 12px;
+  color: grey;
+}
+
+nav.windowsMenu .menuIcon {
+  width: 35px;
+  position: absolute;
+  transform: translateX(-190px) translateY(-175px);
+}
+
+nav.windowsMenu .MenuButton {
+  list-style-type: none;
 }
