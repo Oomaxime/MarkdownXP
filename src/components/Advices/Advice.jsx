@@ -28,7 +28,7 @@ const Advice = () => {
       <img src="/src/assets/gifs/advice/bg9.gif" className="AdviceGif8" />
       <img src="/src/assets/gifs/advice/WS2p.gif" className="AdviceGif9" />
       <img src="/src/assets/gifs/advice/ZKZx.gif" className="AdviceGif10" />
-      <h1 className="advice-title">Advice of the moment</h1>
+      <h1 className="advice-title">Advice of the Day</h1>
       <h2 className="advice-text">{advice}</h2>
     </div>
   );

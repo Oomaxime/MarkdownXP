@@ -65,7 +65,7 @@ const Mocktail = () => {
           className="MocktailGif11"
         />
 
-        <h1 className="mocktail-title">Mocktail of the moment</h1>
+        <h1 className="mocktail-title">Mocktail of the Day</h1>
         <h2 className="mocktail-description">{mocktail.strDrink}</h2>
         <img
           className="mocktail-image"

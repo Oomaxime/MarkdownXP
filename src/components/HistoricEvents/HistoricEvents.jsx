@@ -58,7 +58,7 @@ const History = () => {
           src="/src/assets/gifs/historicEvent/X118.gif"
           className="EventGif9"
         />
-        <h1 className="event-title">Historic moments of the day</h1>
+        <h1 className="event-title">Historic moments of the Day</h1>
         {event.map((event, index) => (
           <p key={index} className="event-description">
             {event.year}:{event.text}
