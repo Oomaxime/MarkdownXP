@@ -44,8 +44,8 @@ function NavBarApp() {
         setOldName(titleMarkdown)
         
       } else {
-        // Input is blank => set the old name as a default name : "Change name here"
-        setOldName("Change name here")
+        // Input is blank => set the old name as a default name : "Document"
+        setOldName("Document")
       }
 
       // Make the user leave the input when enter is pressed
