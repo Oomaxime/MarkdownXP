@@ -18,7 +18,7 @@ function ImportFile() {
                 setMarkdown(content);
                 setTitleMarkdown(file.name.replace('.md', ''));
                 if (id) {
-                    setData([...data, { id: id, title: file.name.replace('.md', ''), body: content }]);
+                    setData([...data, { id: id, title: titleMarkdown, body: content }]);
                     setCurrentId(id);
                 }
             }
