@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import "./desktopShortcut.css";
 
-function DesktopShortcut({ label, icon, onClick }) {
+function DesktopShortcut({ label, icon, onClickProps }) {
   return (
-    <button className="shortcutButton" onClick={onClick}>
+    <button className="shortcutButton" onClick={onClickProps}>
       <div className="shortcutDiv">
         <img className="shortcutIcon" src={icon} />
         <img className="shortcutArrow" src="src/assets/images/iconArrow.png" />
@@ -16,7 +16,7 @@ function DesktopShortcut({ label, icon, onClick }) {
 DesktopShortcut.propTypes = {
   label: PropTypes.string,
   icon: PropTypes.string,
-  onClick: PropTypes.func,
+  onClickProps: PropTypes.func,
 };
 
 export default DesktopShortcut;

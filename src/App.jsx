@@ -25,6 +25,7 @@ function App() {
             label="API Storm"
             icon="src/assets/images/IeShortcutIcon.png"
           />
+
           <WebBrowser
             title="Joke of the day"
             url="/jokes.com"
