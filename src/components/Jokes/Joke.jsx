@@ -29,7 +29,7 @@ const Joke = () => {
       <img src="/src/assets/gifs/joke/YbrH.gif" className="JokeGif4" />
       <img src="/src/assets/gifs/joke/3kld.gif" className="JokeGif5" />
       <img src="/src/assets/gifs/joke/MXfm.gif" className="JokeGif6" />
-      <h1 className="joke-title">Joke of the Moment</h1>
+      <h1 className="joke-title">Joke of the Day</h1>
       <p className="joke-setup">{joke.setup}</p>
       <p
         className={`joke-punchline ${isFlipped ? "flipped" : ""}`}
