@@ -15,8 +15,8 @@ function NewFile() {
         const id = Date.now()
         // set the markdown to a blank canvas
         setMarkdown("")
-        // Input is blank => set the old name as a default name : "Change name here"
-        setTitleMarkdown("Change name here")
+        // Input is blank => set the old name as a default name : "Document"
+        setTitleMarkdown("Document")
         // set its data in the local storage
         setData([...data,{id:id,title:titleMarkdown, body:markdown}])
         // set the current id to the newly created markdown
