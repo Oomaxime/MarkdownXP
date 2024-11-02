@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import "./desktopShortcut.css";
 
+// Reproduce the desktop shortcut of windows XP.
 function DesktopShortcut({ label, icon, onClickProps }) {
   return (
     <button className="shortcutButton" onClick={onClickProps}>

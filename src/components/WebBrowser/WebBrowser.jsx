@@ -14,10 +14,17 @@ export default function WebBrowser({
 
   const [offset, setOffset] = useState({ x: 0, y: 0 });
 
+  //Setup of the drag window logic
+
+  //change isDragging state to false when mouse is up
   const handleMouseUp = () => {
     setIsDragging(false);
   };
 
+  /**
+   * If the user press down the mouse on the red cross, the window will be hidden
+   * If the user keep press down the mouse on the title bar, the window offset will be updated and isDragging will be set to true
+   */
   const handleMouseDown = (e) => {
     if (e.target.classList.contains("closeButton")) {
       browserRef.current.style.display = "none";
@@ -31,6 +38,33 @@ export default function WebBrowser({
     });
   };
 
+  // Copilot give us the useCallback with useEffect tips to avoid infinite loop
+
+  // If isDragging is true, the window will follow the mouse
+  const handleMouseMove = useCallback(
+    (e) => {
+      if (isDragging) {
+        browserRef.current.style.left = `${e.clientX - offset.x}px`;
+        browserRef.current.style.top = `${e.clientY - offset.y}px`;
+      }
+    },
+    [isDragging, offset.x, offset.y]
+  );
+
+  /*
+   *Add the event listener when the component is mounted
+   * Remove the event listener when the component is unmounted
+   */
+
+  useEffect(() => {
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [isDragging, handleMouseMove]);
+
+  // Put the window on top when clicked
   const focusWindow = () => {
     const windows = Array.from(document.querySelectorAll(".browserWindow"));
     const currentZIndex = parseInt(browserRef.current.style.zIndex, 10) || 0;
@@ -44,25 +78,6 @@ export default function WebBrowser({
 
     browserRef.current.style.zIndex = windows.length;
   };
-
-  // Copilot give us the useCallback with useEffect tips to avoid infinite loop
-  const handleMouseMove = useCallback(
-    (e) => {
-      if (isDragging) {
-        browserRef.current.style.left = `${e.clientX - offset.x}px`;
-        browserRef.current.style.top = `${e.clientY - offset.y}px`;
-      }
-    },
-    [isDragging, offset.x, offset.y]
-  );
-
-  useEffect(() => {
-    document.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, [isDragging, handleMouseMove]);
 
   return (
     <div

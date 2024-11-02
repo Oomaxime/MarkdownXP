@@ -1,3 +1,4 @@
+/* Setup all the variable needed*/
 :root {
   --primary-color: #1a82ff;
   --secondary-color: #1b3273;
@@ -17,12 +18,16 @@
     inset 0 -6px 8.4px rgba(0, 0, 0, 0.22);
 }
 
+/* Import the font*/
+
 @font-face {
   font-family: var(--font-family);
   src: url("../../assets/fonts/DotGothic16-Regular.ttf") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
+
+/* Style the browser window*/
 
 .browserWindow {
   width: 840px;
@@ -40,6 +45,7 @@
 }
 
 /*L'astuce du before pour faire des border avec un gradient viens de Copilote*/
+
 .browserWindow::before {
   content: "";
   position: absolute;

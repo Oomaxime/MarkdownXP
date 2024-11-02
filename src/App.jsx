@@ -25,7 +25,7 @@ function App() {
   };
 
   const markdownRoute = () => {
-    window.location.href = '/markdown';
+    window.location.href = "/markdown";
   };
 
   function Desktop() {
@@ -37,7 +37,7 @@ function App() {
             icon="src/assets/images/IeShortcutIcon.png"
             onClick={reloadOnlyWebBrowsers}
           />
-          <DesktopShortcut 
+          <DesktopShortcut
             label="Markdown"
             icon="src/assets/images/markdown.png"
             onClick={markdownRoute}
@@ -90,7 +90,7 @@ function App() {
             <History />
           </WebBrowser>
         </main>
-        <Navbar reloadOnlyWebBrowsers={reloadOnlyWebBrowsers}/>
+        <Navbar reloadOnlyWebBrowsers={reloadOnlyWebBrowsers} />
       </>
     );
   }
