@@ -1,0 +1,9 @@
+.Import {
+    display: flex;
+    background-color: transparent;
+    border: none;
+}
+
+.FileInput {
+    display: none;
+}
