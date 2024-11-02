@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import "./webBrowser.css";
 export default function WebBrowser({
   title = "MarkdownXP Explorer",
-  url = "https://www.avoir20sur20.com/?=projetMarkdonwXP",
+  url = "https://www.tpreact.com/?=projetMarkdonwXP",
   leftOffset = "0",
   topOffset = "0",
-  size = { width: 480, height: 200 },
+  size = { width: 800, height: 600 },
   children,
 }) {
   const browserRef = useRef(null);
@@ -32,10 +32,17 @@ export default function WebBrowser({
   };
 
   const focusWindow = () => {
-    document.querySelectorAll(".browserWindow").forEach((window) => {
-      window.style.zIndex = "0";
+    const windows = Array.from(document.querySelectorAll(".browserWindow"));
+    const currentZIndex = parseInt(browserRef.current.style.zIndex, 10) || 0;
+
+    windows.forEach((window) => {
+      const zIndex = parseInt(window.style.zIndex, 10) || 0;
+      if (zIndex > currentZIndex) {
+        window.style.zIndex = zIndex - 1;
+      }
     });
-    browserRef.current.style.zIndex = "1";
+
+    browserRef.current.style.zIndex = windows.length;
   };
 
   // Copilot give us the useCallback with useEffect tips to avoid infinite loop
