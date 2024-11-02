@@ -5,23 +5,19 @@ import "./Joke.css";
 const Joke = () => {
   const [joke, setJoke] = useState(null);
   const [isFlipped, setIsFlipped] = useState(true);
-  const updateJoke = async () => {
-    try {
-      const jokeData = await fetchJoke();
-      setJoke(jokeData);
-      setIsFlipped(true);
-    } catch {
-      console.log("erreur recuperation joke");
-    }
-  };
 
   const punchlineClick = () => {
     setIsFlipped(!isFlipped);
   };
   useEffect(() => {
-    updateJoke();
-    const interval = setInterval(updateJoke, 60000);
-    return () => clearInterval(interval);
+    fetchJoke()
+      .then((data) => {
+        setJoke(data);
+        setIsFlipped(true);
+      })
+      .catch((err) => {
+        console.log("Erreur récuperation joke");
+      });
   }, []);
 
   if (!joke) return <p>We are looking for the perfect joke for you...</p>;
