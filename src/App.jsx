@@ -14,6 +14,7 @@ import History from "./components/HistoricEvents/HistoricEvents";
 import Advice from "./components/Advices/Advice";
 import Joke from "./components/Jokes/Joke";
 import DesktopShortcut from "./components/DesktopShortcut/DesktopShortcut";
+import Recipe from "./components/Recipe/Recipe";
 
 function App() {
   function Desktop() {
@@ -23,18 +24,47 @@ function App() {
           <DesktopShortcut
             label="API Storm"
             icon="src/assets/images/IeShortcutIcon.png"
-           />
-          <WebBrowser title="Joke" url="/jokes.com">
+          />
+          <WebBrowser
+            title="Joke of the day"
+            url="/jokes.com"
+            leftOffset="14%"
+            topOffset="8%"
+          >
             <Joke />
           </WebBrowser>
-          <WebBrowser title="Advice" url="/advices.com">
+          <WebBrowser
+            title="Recipe"
+            url="/recipe.com"
+            leftOffset="18%"
+            topOffset="12%"
+          >
+            <Recipe />
+          </WebBrowser>
+          <WebBrowser
+            title="Advice"
+            url="/advices.com"
+            leftOffset="22%"
+            topOffset="16%"
+          >
             <Advice />
           </WebBrowser>
-          <WebBrowser title="Historic Events" url="/historicevents.com">
-            <History />
-          </WebBrowser>
-          <WebBrowser title="Mocktail" url="/mocktails.com">
+
+          <WebBrowser
+            title="Mocktail"
+            url="/mocktails.com"
+            leftOffset="26%"
+            topOffset="20%"
+          >
             <Mocktail />
+          </WebBrowser>
+          <WebBrowser
+            title="Historic Events"
+            url="/historicevents.com"
+            leftOffset="30%"
+            topOffset="24%"
+          >
+            <History />
           </WebBrowser>
         </main>
         <Navbar />
