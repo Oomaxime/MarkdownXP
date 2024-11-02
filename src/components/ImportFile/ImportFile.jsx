@@ -28,7 +28,7 @@ function ImportFile() {
     }
 
     return (
-            <button className="Import" onClick={() => document.querySelector('.FileInput').click()}>
+            <button key="Import" className="Import" onClick={() => document.querySelector('.FileInput').click()}>
             Import
                     <input type="file" accept=".md" onChange={Import} className="FileInput"/>
             </button>

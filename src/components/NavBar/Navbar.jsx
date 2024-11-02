@@ -2,7 +2,7 @@ import windowslogo from "../../assets/images/windowslogo.png";
 import "./nav.css";
 import { useEffect, useState } from "react";
 import Menu from "./Menu";
-//import OpenedFiles from "../OpenedFiles/OpenedFiles";
+import OpenedFiles from "../OpenedFiles/OpenedFiles";
 
 export default function Navbar() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -24,8 +24,10 @@ export default function Navbar() {
       <button onClick={toggleMenu} className="startButton">
         <img src={windowslogo} className="windowslogo" alt="Windows Logo" />
         <p>start</p>
-      </button>
-      {/*<OpenedFiles/>*/}
+      </button> 
+      
+      <OpenedFiles/>
+
       <div className="language">
         <p>EN</p>
       </div>

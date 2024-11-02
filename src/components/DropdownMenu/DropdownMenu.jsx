@@ -23,7 +23,7 @@ function DropdownMenu({Dict_link}) {
                             return <ImportFile/>
                             
                         default:
-                            return <a id={text} href={link}>{text}</a>;
+                            return <a key={text} href={link}>{text}</a>;
                     }
                 })
             }
