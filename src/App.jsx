@@ -35,12 +35,12 @@ function App() {
           <DesktopShortcut
             label="API Storm"
             icon="src/assets/images/IeShortcutIcon.png"
-            onClick={reloadOnlyWebBrowsers}
+            onClickProps={reloadOnlyWebBrowsers}
           />
           <DesktopShortcut
             label="Markdown"
             icon="src/assets/images/markdown.png"
-            onClick={markdownRoute}
+            onClickProps={markdownRoute}
           />
           <WebBrowser
             key={`joke-${reloadWebBrowsers}`}
