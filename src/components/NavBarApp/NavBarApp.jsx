@@ -8,32 +8,47 @@ import DownloadFile from "../DownloadFile/DownloadFile";
 import { useLocalStorageContext } from "../../providers/LocalStorageProvider";
 
 function NavBarApp() {
+  // State to track if the navbar is being hovered
   const [isHovered, setIsHovered] = useState(false);
+  // State to track the parent position (categories) for the tool bar
   const [parentPosition, setParentPosition] = useState(0);
-  const [markdown, setMarkdown, titleMarkdown, setTitleMarkdown] = useMarkdown();
+  // State to track the old name of the markdown file (the title)
   const [oldname, setOldName] = useState("")
+  // Custom hook to manage the markdown content and the title of the markdown
+  const [markdown, setMarkdown, titleMarkdown, setTitleMarkdown] = useMarkdown();
+  
+
 
   function updateTitleMarkdown(event) {
+    //Get the value from the input and update the title with the hook
     const value = event.target.value;
     setTitleMarkdown(value);
   };
 
   function saveOldName(event) {
+    // Save the current title of the markdown
     setOldName(titleMarkdown)
   }
 
   function isVoid(event) {
+    // Put the old name as the current one (used when the input value received contains nothing)
     setTitleMarkdown(oldname)
   }
 
-  function addTitleUpdate(event) {
+  function addUpdatedTitle(event) {
+    // Verify if the user want to apply the changes (here if he pressed enter)
+    // Then do a if/else statement to see wether the input is blank or not
     if (event.key === "Enter") {
       if (titleMarkdown != "") {
+        // Input is not blank => set the old name as the new one
         setOldName(titleMarkdown)
         
       } else {
-        setOldName("Document")
+        // Input is blank => set the old name as a default name : "Change name here"
+        setOldName("Change name here")
       }
+
+      // Make the user leave the input when enter is pressed
       setTimeout(()=>{
         event.target.blur();
       }, 1)
@@ -46,7 +61,7 @@ function NavBarApp() {
         <div className="nameProgram">
           <img className="iconeProgram" src={iconeApp} alt="icone" />
           <div className="title"> 
-          <input id="titleMarkdown" type="text" value={titleMarkdown} onChange={updateTitleMarkdown} onFocus={saveOldName} onKeyDown={addTitleUpdate} onBlur={isVoid}/>
+          <input id="titleMarkdown" type="text" value={titleMarkdown} onChange={updateTitleMarkdown} onFocus={saveOldName} onKeyDown={addUpdatedTitle} onBlur={isVoid}/>
           <p> - MarkdownXp.exe</p>
           </div>
         </div>
