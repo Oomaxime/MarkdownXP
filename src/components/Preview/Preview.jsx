@@ -1,3 +1,6 @@
+// Followed tutorial : https://youtu.be/tYa0WMR0TGU?si=5ifU7xjyjqwahIn5
+// And applied some changes to it
+
 import TitleBar from "../TitleBar/TitleBar";
 import { useMarkdown } from "../../providers/MarkdownProvider";
 import Markdown from "markdown-to-jsx";
@@ -6,6 +9,7 @@ import { materialLight } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import "./Preview.css"
 
 
+// Followed the documentation and stackoverflow : https://stackoverflow.com/questions/65807962/how-to-apply-code-highlights-within-markdown-to-jsx-package-in-react
 function Code({ className = '', children }) {
     const language = className.replace("lang-", "");
     return (
@@ -19,6 +23,9 @@ function Code({ className = '', children }) {
 
 
 function Preview() {
+    // Preview the markdown
+
+    // Custom hook to manage the markdown
     const [markdown] = useMarkdown()
 
     return (
