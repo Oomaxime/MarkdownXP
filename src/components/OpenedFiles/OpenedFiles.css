@@ -1,5 +1,4 @@
 .ListFile {
-    /* FAIRE UN MEILLEUR CSS DANS LA NAVBAR POUR QUE CA MARCHE EN REACTIF */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,6 +6,27 @@
     overflow-x: scroll;
     gap: .1rem;
 }
+
+/* ===== Used stack overflow : https://stackoverflow.com/questions/48960404/how-to-change-overflow-y-scrollbar-styles */
+
+.ListFile::-webkit-scrollbar-track {
+    border: none;
+    padding: 2px 0;
+    background-color: rgba(35, 75, 157, 0.5);
+}
+
+.ListFile::-webkit-scrollbar {
+    width: 1rem;
+}
+
+.ListFile::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 1.5px 1.5px 1px 0px rgba(255, 255, 255, 0.355);
+    background-color: rgba(57, 128, 244, 1);
+    border: none;
+}
+
+/* ===== */
 
 .File {
     display: flex;
@@ -16,9 +36,6 @@
     border: rgba(35, 75, 157, 0.5) .5px;
     border-radius: .25rem;
     box-shadow: inset 1.5px 1.5px 1px 0px rgba(255, 255, 255, 0.355);
-    /* box-shadow: inset 0px 4px 8px 0px rgba(255, 255, 255, 1);
-    box-shadow: inset -2px -2px 2px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 2px 0px 2px 0px rgba(0, 0, 0, 0.1); */
 
 }
 

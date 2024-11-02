@@ -30,7 +30,7 @@ function SaveFile() {
     }
 
     return (
-        <button className='Save' onClick={Save}>Save</button>
+        <button key="Save" className='Save' onClick={Save}>Save</button>
     )
 }
 

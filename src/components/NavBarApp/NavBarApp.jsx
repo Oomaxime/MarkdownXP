@@ -85,7 +85,7 @@ function NavBarApp() {
           className="link"
           >Edit
           {isHovered && (parentPosition == 1) && (
-              <DropdownMenu Dict_link={{test:'test'}}/>
+              <DropdownMenu Dict_link={{Demonstration:'Demonstration'}}/>
           )}
         </div>
       </div>

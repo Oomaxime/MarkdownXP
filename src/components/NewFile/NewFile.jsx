@@ -25,7 +25,7 @@ function NewFile() {
 
     // Return a button that calls NewMarkdown when clicked
     return (
-        <button className='New' onClick={NewMarkdown}>New</button>
+        <button key="New" className='New' onClick={NewMarkdown}>New</button>
     )
 }
 
