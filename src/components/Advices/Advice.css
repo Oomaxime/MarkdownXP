@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "BridsOfParadise";
+  src: url("../../assets/fonts/BridsOfParadise.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tempting";
+  src: url("../../assets/fonts/Tempting.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.advice {
+  background-image: url("../../assets/gifs/advice/19TS.gif");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.advice-title {
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "BridsOfParadise", sans-serif;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+.advice-text {
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Tempting", sans-serif;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+.advice-text::before {
+  content: "“";
+  margin-right: 5px;
+  font-size: 1.2em;
+}
+
+.advice-text::after {
+  content: "”";
+  margin-left: 5px;
+  font-size: 1.2em;
+}
+.AdviceGif1 {
+  top: 100px;
+  left: 380px;
+  position: absolute;
+  width: 80px;
+}
+.AdviceGif2 {
+  top: 90px;
+  left: 600px;
+  position: absolute;
+  width: 50px;
+}
+.AdviceGif3 {
+  top: 410px;
+  left: 500px;
+  position: absolute;
+  width: 150px;
+}
+.AdviceGif4 {
+  top: 370px;
+  left: 180px;
+  position: absolute;
+  width: 90px;
+}
+.AdviceGif5 {
+  top: 130px;
+  left: 70px;
+  position: absolute;
+  width: 100px;
+}
+.AdviceGif6 {
+  top: 160px;
+  left: 750px;
+  position: absolute;
+  width: 50px;
+}
+.AdviceGif7 {
+  top: 300px;
+  left: 20px;
+  position: absolute;
+  width: 70px;
+}
+.AdviceGif8 {
+  top: 300px;
+  left: 700px;
+  position: absolute;
+  width: 90px;
+}
+.AdviceGif9 {
+  top: 460px;
+  left: 40px;
+  position: absolute;
+  width: 100px;
+}
+.AdviceGif10 {
+  top: 460px;
+  left: 390px;
+  position: absolute;
+  width: 50px;
+}
