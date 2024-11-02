@@ -9,13 +9,28 @@ import Navbar from "./components/NavBar/Navbar";
 import WebBrowser from "./components/WebBrowser/WebBrowser";
 import EditorProvider from "./providers/EditorProvider";
 import LocalStorageProvider from "./providers/LocalStorageProvider";
+import Mocktail from "./components/Mocktails/Mocktail";
+import History from "./components/HistoricEvents/HistoricEvents";
+import Advice from "./components/Advices/Advice";
+import Joke from "./components/Jokes/Joke";
 
 function App() {
   function Desktop() {
     return (
       <>
         <main>
-          <WebBrowser />
+          <WebBrowser title="Joke" url="/jokes.com">
+            <Joke />
+          </WebBrowser>
+          <WebBrowser title="Advice" url="/advices.com">
+            <Advice />
+          </WebBrowser>
+          <WebBrowser title="Historic Events" url="/historicevents.com">
+            <History />
+          </WebBrowser>
+          <WebBrowser title="Mocktail" url="/mocktails.com">
+            <Mocktail />
+          </WebBrowser>
         </main>
         <Navbar />
       </>

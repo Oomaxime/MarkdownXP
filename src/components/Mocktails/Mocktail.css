@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "Eastback";
+  src: url("../../assets/fonts/Eastback-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Comic Ms";
+  src: url("../../assets/fonts/COMIC.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.mocktail-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #000000;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  text-align: center;
+}
+.mocktail {
+  background-image: url("../../assets/gifs/mocktail/VHdA.gif");
+  width: 100%;
+  height: 100%;
+}
+.mocktail-title {
+  font-family: "Eastback", sans-serif;
+  font-size: 48px;
+  color: #ff6a9c;
+  text-shadow: -1px -1px 0 #ff0044, 1px -1px 0 #ff0044, -1px 1px 0 #ff0044,
+    1px 1px 0 #ff0044;
+  text-align: center;
+}
+
+.mocktail-description {
+  font-size: 16px;
+  color: #59ff00;
+  font-family: "Comic Ms", sans-serif;
+}
+
+.mocktail-image {
+  width: auto;
+  height: 230px;
+  border: 3px solid #87ceeb;
+  padding: 5px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+.MocktailGif1 {
+  top: 160px;
+  left: 120px;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+}
+.MocktailGif2 {
+  top: 290px;
+  left: 550px;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  transform: rotate(15deg);
+}
+.MocktailGif3 {
+  top: 280px;
+  left: 200px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: rotate(15deg);
+}
+.MocktailGif4 {
+  top: 400px;
+  left: 500px;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+}
+.MocktailGif5 {
+  top: 410px;
+  left: 125px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.MocktailGif6 {
+  top: 250px;
+  left: 570px;
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  transform: rotate(-90deg);
+}
+.MocktailGif7 {
+  top: 400px;
+  left: 250px;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  transform: rotate(-90deg);
+}
+.MocktailGif9 {
+  top: 200px;
+  left: 550px;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+.MocktailGif8 {
+  top: 350px;
+  left: 130px;
+  position: absolute;
+  width: 90px;
+  height: 90px;
+}
+.MocktailGif10 {
+  top: 450px;
+  left: 650px;
+  position: absolute;
+  width: 40px;
+}
+.MocktailGif11 {
+  top: 330px;
+  left: 140px;
+  position: absolute;
+  width: 30px;
+}

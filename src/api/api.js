@@ -79,8 +79,8 @@ function fetchEventHistorical() {
     .then((data) => {
       const events = data.data.Events;
       if (events.length > 0) {
-        const randomEvent = Math.floor(Math.random() * events.length);
-        return events[randomEvent];
+        const numberOfEvents = Math.min(3, events.length);
+        return events.slice(0, numberOfEvents);
       }
       return null;
     })
