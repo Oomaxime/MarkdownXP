@@ -4,21 +4,18 @@ import "./Advice.css";
 
 const Advice = () => {
   const [advice, setAdvice] = useState(null);
-  const updateAdvice = async () => {
-    try {
-      const adviceData = await fetchAdvice();
-      setAdvice(adviceData);
-    } catch {
-      console.log("Erreur récupération conseil");
-    }
-  };
   useEffect(() => {
-    updateAdvice();
-    const interval = setInterval(updateAdvice, 60000);
-    return () => clearInterval(interval);
+    fetchAdvice()
+      .then((data) => {
+        setAdvice(data);
+      })
+      .catch((err) => {
+        console.log("Erreur récuperation Advice");
+      });
   }, []);
 
   if (!advice) return <p>We are looking for the perfect quote for you...</p>;
+
   return (
     <div className="advice">
       <img src="/src/assets/gifs/advice/bgV.gif" className="AdviceGif1" />
