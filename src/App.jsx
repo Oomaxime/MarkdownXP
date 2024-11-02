@@ -24,6 +24,10 @@ function App() {
     setReloadWebBrowsers((prev) => prev + 1);
   };
 
+  const markdownRoute = () => {
+    window.location.href = '/markdown';
+  };
+
   function Desktop() {
     return (
       <>
@@ -31,6 +35,12 @@ function App() {
           <DesktopShortcut
             label="API Storm"
             icon="src/assets/images/IeShortcutIcon.png"
+            onClick={reloadOnlyWebBrowsers}
+          />
+          <DesktopShortcut 
+            label="Markdown"
+            icon="src/assets/images/markdown.png"
+            onClick={markdownRoute}
           />
           <WebBrowser
             key={reloadWebBrowsers}

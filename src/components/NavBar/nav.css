@@ -196,4 +196,7 @@ nav.windowsMenu .menuIcon {
 
 nav.windowsMenu .MenuButton {
   list-style-type: none;
+  cursor : pointer;
 }
+
+
