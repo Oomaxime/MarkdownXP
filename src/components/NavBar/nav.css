@@ -158,12 +158,12 @@ nav.windowsMenu .under-item {
   color: grey;
 }
 
-nav.windowsMenu .markdown {
+nav.windowsMenu .menuIcon {
   width: 35px;
   position: absolute;
   transform: translateX(-190px) translateY(-175px);
 }
 
-nav.windowsMenu .markdownButton {
+nav.windowsMenu .MenuButton {
   list-style-type: none;
 }

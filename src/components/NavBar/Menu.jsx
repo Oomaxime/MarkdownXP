@@ -8,17 +8,21 @@ export default function Menu() {
     <nav className="windowsMenu">
       <div className="topBleu">ADMIN</div>
       <nav className="centralMenu">
-        <li className="markdownButton">
+        <li className="MenuButton">
           <Link to="/markdown">
-            <img src={markdown} className="markdown" alt="Markdown Logo" />
+            <img src={markdown} className="menuIcon" alt="Markdown Logo" />
             <div className="menu-item">Markdown</div>
             <div className="under-item"> Editor</div>
           </Link>
         </li>
       </nav>
       <div className="bottomBleu">
-        <img src={shutdown} className="shutdown" alt="Shut Down Logo" />
-          SHUT DOWN 
+        <li className="MenuButton">
+          <Link to="/">
+            <img src={shutdown} className="shutdown" alt="Shut Down Logo" />
+            SHUT DOWN 
+          </Link>
+        </li>
         </div>
     </nav>
   );
