@@ -35,6 +35,8 @@
   background-clip: content-box, border-box;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   box-shadow: var(--box-shadow-inset);
+  z-index: 1;
+  user-select: none;
 }
 
 /*L'astuce du before pour faire des border avec un gradient viens de Copilote*/
@@ -58,6 +60,11 @@
   background: var(--title-bar-gradient);
   border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
   box-shadow: inset 0 2px 1.2px #3291ff;
+  cursor: grab;
+}
+
+.browserWindowTitleBar:active {
+  cursor: grabbing;
 }
 
 .mainTitle {
@@ -172,6 +179,12 @@
 
 .urlInput > img {
   height: 16px;
+  user-select: none;
+}
+
+.urlInput > div > p {
+  user-select: text;
+  cursor: text;
 }
 
 .goButton {

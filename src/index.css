@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Segoe UI";
-  src: url("../../assets/fonts/SegoeUI.ttf") format("woff");
+  src: url("./assets/fonts/SegoeUI.ttf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -30,6 +30,11 @@ body {
   min-height: 100vh;
   background-color: #f0f0f0;
   color: #333;
+  overflow: hidden;
+  background-image: url("./assets/images/winXPWallpaper.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 img,
@@ -60,5 +65,14 @@ button {
   border: 2px solid rgba(0, 67, 233, 100);
   border-radius: 9.6px 9.6px 0px 0px;
   background-color: rgba(26, 130, 255, 1);
-  background-image: linear-gradient(180deg, rgba(26, 130, 255, 1) 0%, rgba(27, 50, 115, 1) 100%);
+  background-image: linear-gradient(
+    180deg,
+    rgba(26, 130, 255, 1) 0%,
+    rgba(27, 50, 115, 1) 100%
+  );
+}
+
+main {
+  display: flex;
+  flex-direction: column;
 }

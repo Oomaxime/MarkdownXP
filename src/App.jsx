@@ -13,12 +13,17 @@ import Mocktail from "./components/Mocktails/Mocktail";
 import History from "./components/HistoricEvents/HistoricEvents";
 import Advice from "./components/Advices/Advice";
 import Joke from "./components/Jokes/Joke";
+import DesktopShortcut from "./components/DesktopShortcut/DesktopShortcut";
 
 function App() {
   function Desktop() {
     return (
       <>
         <main>
+          <DesktopShortcut
+            label="API Storm"
+            icon="src/assets/images/IeShortcutIcon.png"
+           />
           <WebBrowser title="Joke" url="/jokes.com">
             <Joke />
           </WebBrowser>
