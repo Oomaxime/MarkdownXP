@@ -42,9 +42,8 @@ function App() {
             icon="src/assets/images/markdown.png"
             onClick={markdownRoute}
           />
-
           <WebBrowser
-            key={reloadWebBrowsers}
+            key={`joke-${reloadWebBrowsers}`}
             title="Joke of the day"
             url="/jokes.com"
             leftOffset="14%"
@@ -53,7 +52,7 @@ function App() {
             <Joke />
           </WebBrowser>
           <WebBrowser
-            key={reloadWebBrowsers}
+            key={`recipe-${reloadWebBrowsers}`}
             title="Recipe"
             url="/recipe.com"
             leftOffset="18%"
@@ -62,7 +61,7 @@ function App() {
             <Recipe />
           </WebBrowser>
           <WebBrowser
-            key={reloadWebBrowsers}
+            key={`advice-${reloadWebBrowsers}`}
             title="Advice"
             url="/advices.com"
             leftOffset="22%"
@@ -72,7 +71,7 @@ function App() {
           </WebBrowser>
 
           <WebBrowser
-            key={reloadWebBrowsers}
+            key={`cocktail-${reloadWebBrowsers}`}
             title="Mocktail"
             url="/mocktails.com"
             leftOffset="26%"
@@ -81,7 +80,7 @@ function App() {
             <Mocktail />
           </WebBrowser>
           <WebBrowser
-            key={reloadWebBrowsers}
+            key={`event-${reloadWebBrowsers}`}
             title="Historic Events"
             url="/historicevents.com"
             leftOffset="30%"
