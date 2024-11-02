@@ -18,6 +18,7 @@ const Advice = () => {
     return () => clearInterval(interval);
   }, []);
 
+  if (!advice) return <p>We are looking for the perfect quote for you...</p>;
   return (
     <div className="advice">
       <img src="/src/assets/gifs/advice/bgV.gif" className="AdviceGif1" />

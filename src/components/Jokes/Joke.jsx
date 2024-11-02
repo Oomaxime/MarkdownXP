@@ -24,6 +24,7 @@ const Joke = () => {
     return () => clearInterval(interval);
   }, []);
 
+  if (!joke) return <p>We are looking for the perfect joke for you...</p>;
   return (
     <div className="joke">
       <img src="/src/assets/gifs/joke/VwCK.gif" className="JokeGif1" />

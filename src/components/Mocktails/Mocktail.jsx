@@ -19,6 +19,8 @@ const Mocktail = () => {
     return () => clearInterval(interval);
   }, []);
 
+  if (!mocktail)
+    return <p>We are looking for the perfect mocktail for you...</p>;
   return (
     <div className="mocktail">
       <div className="mocktail-container">
@@ -46,7 +48,3 @@ const Mocktail = () => {
   );
 };
 export default Mocktail;
-
-
-
-//https://techblog.ingeniance.fr/appeler-une-api-dans-un-composant-fonctionnel-react/

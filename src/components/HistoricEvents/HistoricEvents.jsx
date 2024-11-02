@@ -17,7 +17,10 @@ const History = () => {
     updateEvent();
   }, []);
 
-
+  if (!event)
+    return (
+      <p>We are looking for historical events that might interest you ...</p>
+    );
   return (
     <div className="event">
       <div className="event-container">
