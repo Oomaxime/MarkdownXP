@@ -24,9 +24,9 @@ export default function Navbar({ reloadOnlyWebBrowsers }) {
       <button onClick={toggleMenu} className="startButton">
         <img src={windowslogo} className="windowslogo" alt="Windows Logo" />
         <p>start</p>
-      </button> 
-      
-      <OpenedFiles/>
+      </button>
+
+      {location.pathname === "/markdown" && <OpenedFiles />}
 
       <div className="language">
         <p>EN</p>

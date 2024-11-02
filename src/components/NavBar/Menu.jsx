@@ -26,7 +26,7 @@ export default function Menu({ reloadOnlyWebBrowsers }) {
         <li className="MenuButton">
           <Link to="https://google.com">
             <img src={shutdown} className="shutdown" alt="Shut Down Logo" />
-            SHUT DOWN 
+            SHUT DOWN
           </Link>
         </li>
       </div>
