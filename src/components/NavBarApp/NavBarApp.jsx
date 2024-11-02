@@ -60,7 +60,7 @@ function NavBarApp() {
           >File
 
           {isHovered && (parentPosition == 0) && (
-              <DropdownMenu Dict_link={{new:'', download:'', save:''}}/>
+              <DropdownMenu Dict_link={{new:'', download:'', save:'', import:''}}/>
           )}
         </div>
 
