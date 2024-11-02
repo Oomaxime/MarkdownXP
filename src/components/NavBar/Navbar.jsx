@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Menu from "./Menu";
 //import OpenedFiles from "../OpenedFiles/OpenedFiles";
 
-export default function Navbar() {
+export default function Navbar({ reloadOnlyWebBrowsers }) {
   const [menuVisible, setMenuVisible] = useState(false);
   const [time, settime] = useState(new Date());
 
@@ -39,7 +39,7 @@ export default function Navbar() {
           {String(time.getFullYear()).padStart(2, "0")}
         </p>
       </div>
-      {menuVisible && <Menu />}
+      {menuVisible && <Menu reloadOnlyWebBrowsers={reloadOnlyWebBrowsers} />}
     </nav>
   );
 }

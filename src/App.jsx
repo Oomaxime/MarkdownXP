@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import MarkdownProvider from "./providers/MarkdownProvider";
 import MainLayout from "./components/MainLayout/MainLayout";
 import Editor from "./components/Editor/Editor";
@@ -17,6 +18,12 @@ import DesktopShortcut from "./components/DesktopShortcut/DesktopShortcut";
 import Recipe from "./components/Recipe/Recipe";
 
 function App() {
+  const [reloadWebBrowsers, setReloadWebBrowsers] = useState(0);
+
+  const reloadOnlyWebBrowsers = () => {
+    setReloadWebBrowsers((prev) => prev + 1);
+  };
+
   function Desktop() {
     return (
       <>
@@ -26,6 +33,7 @@ function App() {
             icon="src/assets/images/IeShortcutIcon.png"
           />
           <WebBrowser
+            key={reloadWebBrowsers}
             title="Joke of the day"
             url="/jokes.com"
             leftOffset="14%"
@@ -34,6 +42,7 @@ function App() {
             <Joke />
           </WebBrowser>
           <WebBrowser
+            key={reloadWebBrowsers}
             title="Recipe"
             url="/recipe.com"
             leftOffset="18%"
@@ -42,6 +51,7 @@ function App() {
             <Recipe />
           </WebBrowser>
           <WebBrowser
+            key={reloadWebBrowsers}
             title="Advice"
             url="/advices.com"
             leftOffset="22%"
@@ -51,6 +61,7 @@ function App() {
           </WebBrowser>
 
           <WebBrowser
+            key={reloadWebBrowsers}
             title="Mocktail"
             url="/mocktails.com"
             leftOffset="26%"
@@ -59,6 +70,7 @@ function App() {
             <Mocktail />
           </WebBrowser>
           <WebBrowser
+            key={reloadWebBrowsers}
             title="Historic Events"
             url="/historicevents.com"
             leftOffset="30%"
@@ -67,7 +79,7 @@ function App() {
             <History />
           </WebBrowser>
         </main>
-        <Navbar />
+        <Navbar reloadOnlyWebBrowsers={reloadOnlyWebBrowsers}/>
       </>
     );
   }
