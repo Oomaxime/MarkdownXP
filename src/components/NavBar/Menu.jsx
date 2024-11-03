@@ -4,6 +4,7 @@ import markdown from "../../assets/images/markdown.png";
 import explorerLogo from "../../assets/images/explorerLogo.png";
 import { Link } from "react-router-dom";
 
+// Windows menu which is included in navbar.jsx
 export default function Menu({ reloadOnlyWebBrowsers }) {
   return (
     <nav className="windowsMenu">

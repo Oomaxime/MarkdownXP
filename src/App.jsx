@@ -20,6 +20,8 @@ import Recipe from "./components/Recipe/Recipe";
 function App() {
   const [reloadWebBrowsers, setReloadWebBrowsers] = useState(0);
 
+
+  // restart webBrowser at initial position
   const reloadOnlyWebBrowsers = () => {
     setReloadWebBrowsers((prev) => prev + 1);
   };
