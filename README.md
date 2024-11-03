@@ -4,7 +4,7 @@ React Educational project. This is a markdown editor tweaked to give the windows
 
 #### The Team
 
-Emilie CAVERNE, Louis DONDES, Baptiste JACQUES, Mehdi BENCHRIF, Maxime BIDAN
+Emilie CAVERNE, Louis DONDEY, Baptiste JACQUES, Mehdi BENCHRIF, Maxime BIDAN
 
 ### Run the project
 
