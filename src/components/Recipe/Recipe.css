@@ -1,12 +1,12 @@
 /* Ici c'est mon composant recette */
-.Recette {
+.Recipe {
   background-color: rgb(196, 254, 209);
   overflow-y: auto;
   align-items: center;
   width: 100%;
   max-height: 484px;
 }
-.title_Ingrediant {
+.title_Meal {
   background-color: rgb(5, 111, 58);
   padding: 20px;
   border-radius: 20px;
@@ -66,14 +66,12 @@
   align-items: center;
 }
 
-.liste {
+.list {
   text-decoration: solid;
   list-style: inside;
 }
 
-.test {
-  width: 400px;
-}
+
 
 .border {
   margin: 10px;
@@ -115,4 +113,34 @@
   text-align: center;
   display: flex;
   justify-content: center;
+}
+
+
+/* Ici I design the Inspect-Menu */
+
+.context-menu {
+  width:350px ;
+  position: absolute;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  list-style-type: none;
+  border-radius: 5px;
+  z-index: 1000; 
+  box-shadow: 3px 3px 1px rgb(0, 0, 0);
+}
+
+
+
+.context-menu-nav{
+  padding: 5px;
+  padding: "5px 10px";
+  cursor: "pointer";
+
+}
+
+.context-menu-nav:hover{
+  cursor: pointer;
+  background-color: rgb(0, 152, 239);
+  color: #f5f5f5;
 }
