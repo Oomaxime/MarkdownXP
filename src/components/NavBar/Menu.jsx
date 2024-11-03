@@ -25,7 +25,7 @@ export default function Menu({ reloadOnlyWebBrowsers }) {
       </nav>
       <div className="bottomBleu">
         <li className="MenuButton">
-          <Link to="https://google.com">
+          <Link to="https://google.com" className="ShutDownButton">
             <img src={shutdown} className="shutdown" alt="Shut Down Logo" />
             SHUT DOWN
           </Link>
