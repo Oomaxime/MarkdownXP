@@ -26,7 +26,7 @@ const Joke = () => {
       <img src="/src/assets/gifs/joke/VwCK.gif" className="JokeGif1" />
       <img src="/src/assets/gifs/joke/6k8g.gif" className="JokeGif2" />
       <img src="/src/assets/gifs/joke/3MG4.gif" className="JokeGif3" />
-      <img src="/src/assets/gifs/joke/YbrH.gif" className="JokeGif4" />
+      <img src="/src/assets/gifs/joke/3MG4.gif" className="JokeGif4" />
       <img src="/src/assets/gifs/joke/3kld.gif" className="JokeGif5" />
       <img src="/src/assets/gifs/joke/MXfm.gif" className="JokeGif6" />
       <h1 className="joke-title">Joke of the Day</h1>

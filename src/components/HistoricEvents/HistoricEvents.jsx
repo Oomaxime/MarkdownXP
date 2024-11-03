@@ -23,11 +23,7 @@ const History = () => {
     <div className="event">
       <div className="event-container">
         <img
-          src="/src/assets/gifs/historicEvent/YjjG.gif"
-          className="EventGif1"
-        />
-        <img
-          src="/src/assets/gifs/historicEvent/WME4.gif"
+          src="/src/assets/gifs/historicEvent/56i2.gif"
           className="EventGif2"
         />
         <img
@@ -39,23 +35,15 @@ const History = () => {
           className="EventGif4"
         />
         <img
-          src="/src/assets/gifs/historicEvent/2r6D.gif"
-          className="EventGif5"
-        />
-        <img
           src="/src/assets/gifs/historicEvent/hdt.gif"
           className="EventGif6"
-        />
-        <img
-          src="/src/assets/gifs/historicEvent/X5NY.gif"
-          className="EventGif7"
         />
         <img
           src="/src/assets/gifs/historicEvent/33Ho.gif"
           className="EventGif8"
         />
         <img
-          src="/src/assets/gifs/historicEvent/X118.gif"
+          src="/src/assets/gifs/historicEvent/33Ho.gif"
           className="EventGif9"
         />
         <h1 className="event-title">Historic moments of the Day</h1>

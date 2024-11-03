@@ -19,15 +19,14 @@ const Advice = () => {
   return (
     <div className="advice">
       <img src="/src/assets/gifs/advice/bgV.gif" className="AdviceGif1" />
-      <img src="/src/assets/gifs/advice/DDm.gif" className="AdviceGif2" />
-      <img src="/src/assets/gifs/advice/3mRA.gif" className="AdviceGif3" />
+      <img src="/src/assets/gifs/advice/DDg.gif" className="AdviceGif2" />
+      <img src="/src/assets/gifs/advice/bgV.gif" className="AdviceGif3" />
       <img src="/src/assets/gifs/advice/DDg.gif" className="AdviceGif4" />
-      <img src="/src/assets/gifs/advice/4tyu.gif" className="AdviceGif5" />
-      <img src="/src/assets/gifs/advice/67Pg.gif" className="AdviceGif6" />
-      <img src="/src/assets/gifs/advice/JTr.gif" className="AdviceGif7" />
-      <img src="/src/assets/gifs/advice/bg9.gif" className="AdviceGif8" />
-      <img src="/src/assets/gifs/advice/WS2p.gif" className="AdviceGif9" />
-      <img src="/src/assets/gifs/advice/ZKZx.gif" className="AdviceGif10" />
+      <img src="/src/assets/gifs/advice/bgV.gif" className="AdviceGif5" />
+      <img src="/src/assets/gifs/advice/bgV.gif" className="AdviceGif6" />
+      <img src="/src/assets/gifs/advice/DDg.gif" className="AdviceGif7" />
+      <img src="/src/assets/gifs/advice/bgV.gif" className="AdviceGif8" />
+      <img src="/src/assets/gifs/advice/DDg.gif" className="AdviceGif9" />
       <h1 className="advice-title">Advice of the Day</h1>
       <h2 className="advice-text">{advice}</h2>
     </div>

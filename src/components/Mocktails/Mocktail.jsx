@@ -21,7 +21,7 @@ const Mocktail = () => {
     <div className="mocktail">
       <div className="mocktail-container">
         <img
-          src="/src/assets/gifs/mocktail/WS2k.gif"
+          src="/src/assets/gifs/mocktail/K8Yc.gif"
           className="MocktailGif1"
         />
         <img
@@ -33,20 +33,12 @@ const Mocktail = () => {
           className="MocktailGif3"
         />
         <img
-          src="/src/assets/gifs/mocktail/WS2k.gif"
-          className="MocktailGif4"
-        />
-        <img
           src="/src/assets/gifs/mocktail/99Or.gif"
           className="MocktailGif5"
         />
         <img
           src="/src/assets/gifs/mocktail/CFsa.gif"
           className="MocktailGif6"
-        />
-        <img
-          src="/src/assets/gifs/mocktail/WS2k.gif"
-          className="MocktailGif7"
         />
         <img
           src="/src/assets/gifs/mocktail/5Mz4.gif"
@@ -59,10 +51,6 @@ const Mocktail = () => {
         <img
           src="/src/assets/gifs/mocktail/K8Yc.gif"
           className="MocktailGif10"
-        />
-        <img
-          src="/src/assets/gifs/mocktail/75He.gif"
-          className="MocktailGif11"
         />
 
         <h1 className="mocktail-title">Mocktail of the Day</h1>

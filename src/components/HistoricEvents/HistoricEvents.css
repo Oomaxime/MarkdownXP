@@ -34,20 +34,13 @@
   font-family: "AmericanTypewriter", sans-serif;
   margin: 10px 30px 10px 30px;
 }
-.EventGif1 {
-  top: 495px;
-  left: 350px;
-  position: absolute;
-  width: 150px;
-  clip-path: inset(0 0 50% 0);
-}
+
 .EventGif2 {
   top: 230px;
-  left: 670px;
+  left: 630px;
   position: absolute;
-  width: 80px;
   height: 80px;
-  transform: rotate(15deg);
+  transform: rotate(80deg);
 }
 .EventGif3 {
   top: 250px;
